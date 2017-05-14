@@ -14,6 +14,7 @@ gem 'sqlite3'
 gem 'puma', '~> 3.0'
 
 gem 'omniauth-twitter', '~> 1.4.0'
+gem 'twitter', '~> 6.1'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
@@ -29,6 +30,7 @@ gem 'omniauth-twitter', '~> 1.4.0'
 # gem 'rack-cors'
 
 group :development, :test do
+  gem 'awesome_print'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end
