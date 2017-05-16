@@ -13,7 +13,9 @@ gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 
+gem 'active_model_serializers', '~> 0.10.2'
 gem 'omniauth-twitter', '~> 1.4.0'
+gem 'rack-cors', '~> 0.4.0'
 gem 'twitter', '~> 6.1'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
