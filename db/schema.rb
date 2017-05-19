@@ -10,15 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170514212855) do
+ActiveRecord::Schema.define(version: 20170516004336) do
 
   create_table "tweeters", force: :cascade do |t|
     t.string   "uid"
     t.string   "name"
     t.string   "screen_name"
     t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "profile_image_url"
   end
 
   create_table "users", force: :cascade do |t|
