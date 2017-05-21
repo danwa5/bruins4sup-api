@@ -164,6 +164,8 @@ GEM
       rspec-mocks (~> 3.5.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
+    shoulda-matchers (3.1.1)
+      activesupport (>= 4.0.0)
     simple_oauth (0.3.1)
     simplecov (0.11.2)
       docile (~> 1.1.0)
@@ -219,6 +221,7 @@ DEPENDENCIES
   rack-cors (~> 0.4.0)
   rails (~> 5.0.3)
   rspec-rails (~> 3.4)
+  shoulda-matchers (~> 3.1)
   simplecov
   spring
   spring-watcher-listen (~> 2.0.0)
