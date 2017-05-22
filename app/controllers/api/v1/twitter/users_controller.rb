@@ -10,10 +10,10 @@ module Api
               res = current_user.twitter.user(screen_name).attrs
               render json: res, status: 200
             rescue
-              render json: :not_found
+              render json: {}, status: :not_found
             end
           else
-            render json: :not_found
+            render json: {}, status: :not_found
           end
         end
 

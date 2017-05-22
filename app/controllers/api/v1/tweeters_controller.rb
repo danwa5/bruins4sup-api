@@ -15,11 +15,24 @@ module Api
         end
       end
 
+      def create
+        t = Tweeter.new(tweeter_params)
+        if t.save
+          render json: t, status: 201
+        else
+          render json: tweeter_params, status: :forbidden
+        end
+      end
+
       private
 
       def tweeter
         return nil if params[:id].blank?
         @tweeter ||= Tweeter.where('LOWER(screen_name) LIKE ?', params[:id].downcase).first
+      end
+
+      def tweeter_params
+        params.require(:tweeter).permit(:uid, :screen_name, :name, :description, :profile_image_url)
       end
     end
   end
