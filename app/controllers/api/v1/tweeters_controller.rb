@@ -32,7 +32,8 @@ module Api
       end
 
       def tweeter_params
-        params.require(:tweeter).permit(:uid, :screen_name, :name, :description, :profile_image_url)
+        ActiveModelSerializers::Deserialization.jsonapi_parse(params)
+        # params.require(:tweeter).permit(:uid, :screen_name, :name, :description, :profile_image_url)
       end
     end
   end

@@ -46,15 +46,17 @@ RSpec.describe 'Api/V1/Tweeters', type: :request do
   describe 'POST /api/v1/tweeters' do
     let(:params) do
       {
-        tweeter: {
-          uid: 'UID',
-          screen_name: 'SCREENNAME',
-          name: 'NAME',
+        data: {
+          attributes: {
+            uid: 'UID',
+            screen_name: 'SCREENNAME',
+            name: 'NAME'
+          }
         }
       }
     end
 
-    it 'creates a new object and responds with 201 Created' do
+    it 'deserializes json api params, creates a new object, and responds with 201 Created' do
       expect {
         post '/api/v1/tweeters', params: params
       }.to change(Tweeter, :count).by(1)
