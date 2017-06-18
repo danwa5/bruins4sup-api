@@ -77,4 +77,20 @@ RSpec.describe 'Api/V1/Tweeters', type: :request do
       end
     end
   end
+
+  describe 'DELETE /api/v1/tweeters/:id' do
+    context 'when :id is found' do
+      it 'responds with correct status code' do
+        delete "/api/v1/tweeters/#{tweeter2.screen_name}"
+        expect(response).to be_success
+      end
+    end
+
+    context 'when :id is not found' do
+      it 'responds with correct status code' do
+        delete "/api/v1/tweeters/foo"
+        expect(response).to have_http_status(:not_found)
+      end
+    end
+  end
 end

@@ -1,7 +1,7 @@
 module Api
   module V1
     class TweetersController < ApplicationController
-      before_action :tweeter, only: [:show]
+      before_action :tweeter, only: [:show, :destroy]
 
       def index
         render json: Tweeter.all, status: 200
@@ -21,6 +21,15 @@ module Api
           render json: t, status: 201
         else
           render json: tweeter_params, status: :forbidden
+        end
+      end
+
+      def destroy
+        if @tweeter
+          @tweeter.destroy
+          render json: {}, status: 200
+        else
+          render json: {}, status: :not_found
         end
       end
 

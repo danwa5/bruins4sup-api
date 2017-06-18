@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       namespace 'twitter' do
         resources :users, only: [:show]
       end
-      resources :tweeters, only: [:index, :show, :create]
+      resources :tweeters, only: [:index, :show, :create, :destroy]
     end
   end
 end
