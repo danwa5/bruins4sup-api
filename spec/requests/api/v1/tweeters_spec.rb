@@ -37,8 +37,7 @@ RSpec.describe 'Api/V1/Tweeters', type: :request do
     context 'when :id is not found' do
       it 'responds with 404 Not Found' do
         get '/api/v1/tweeters/foo'
-        json = JSON.parse(response.body)
-        expect(response).to have_http_status(404)
+        expect(response).to have_http_status(:not_found)
       end
     end
   end
@@ -81,7 +80,7 @@ RSpec.describe 'Api/V1/Tweeters', type: :request do
   describe 'DELETE /api/v1/tweeters/:id' do
     context 'when :id is found' do
       it 'responds with correct status code' do
-        delete "/api/v1/tweeters/#{tweeter2.screen_name}"
+        delete "/api/v1/tweeters/#{tweeter2.id}"
         expect(response).to be_success
       end
     end
