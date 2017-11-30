@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Development
 
-Things you may want to cover:
+### Dependencies
 
-* Ruby version
+* Bundler 1.16.0
+* Ruby 2.3.5
 
-* System dependencies
+### Initialization
 
-* Configuration
+```shell
+$ gem install bundler
+$ bundle check || bundle install
+```
 
-* Database creation
+### Run Test Suite
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```shell
+$ COVERAGE=true rspec ./spec
+$ open coverage/index.html
+```
