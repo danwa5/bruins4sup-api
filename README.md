@@ -14,6 +14,12 @@ $ gem install bundler
 $ bundle check || bundle install
 ```
 
+### Twitter Configuration
+
+* Register your app on https://apps.twitter.com
+* Generate your consumer key and secret
+* Set your TWITTER_API_KEY and TWITTER_API_SECRET environment variables
+
 ### Run Test Suite
 
 ```shell
