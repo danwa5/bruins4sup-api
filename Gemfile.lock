@@ -53,6 +53,8 @@ GEM
     case_transform (0.2)
       activesupport
     concurrent-ruby (1.0.5)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
     diff-lcs (1.2.5)
     docile (1.1.5)
     domain_name (0.5.20170404)
@@ -71,6 +73,7 @@ GEM
     ffi (1.9.18)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    hashdiff (0.3.0)
     hashie (3.5.5)
     http (2.2.2)
       addressable (~> 2.3)
@@ -164,6 +167,7 @@ GEM
       rspec-mocks (~> 3.5.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
+    safe_yaml (1.0.4)
     shoulda-matchers (3.1.1)
       activesupport (>= 4.0.0)
     simple_oauth (0.3.1)
@@ -202,6 +206,10 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.4)
+    webmock (1.24.2)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
+      hashdiff
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -228,6 +236,7 @@ DEPENDENCIES
   sqlite3
   twitter (~> 6.1)
   tzinfo-data
+  webmock
 
 BUNDLED WITH
    1.14.6

@@ -36,6 +36,7 @@ group :test do
   gem 'faker', '~> 1.7'
   gem 'shoulda-matchers', '~> 3.1'
   gem 'simplecov', require: false
+  gem 'webmock'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
