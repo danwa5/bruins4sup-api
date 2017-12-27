@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   namespace 'api' do
     namespace 'v1' do
       namespace 'twitter' do
-        resources :users, only: [:show]
+        resources :users, only: [:show] do
+          resources :tweets, only: [:index]
+        end
       end
       resources :tweeters, only: [:index, :show, :create, :destroy]
     end
