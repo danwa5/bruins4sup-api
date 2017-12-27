@@ -14,6 +14,7 @@ gem 'sqlite3'
 gem 'puma', '~> 3.0'
 
 gem 'active_model_serializers', '~> 0.10.2'
+gem 'nokogiri', '~> 1.8.1'
 gem 'omniauth-twitter', '~> 1.4.0'
 gem 'rack-cors', '~> 0.4.0'
 gem 'twitter', '~> 6.1'
