@@ -1,0 +1,11 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'lib/tasks/**/*'
+    - 'junk/**/*'
+
+Metrics/LineLength:
+  # Change the default 80 chars limit value
+  Max: 115
