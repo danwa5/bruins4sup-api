@@ -2,9 +2,12 @@ inherit_from: .rubocop_todo.yml
 
 AllCops:
   Exclude:
+    - 'bin/**/*'
+    - 'config/**/*'
     - 'db/**/*'
-    - 'lib/tasks/**/*'
     - 'junk/**/*'
+    - 'lib/tasks/**/*'
+    - 'spec/factories.rb'
 
 Metrics/LineLength:
   # Change the default 80 chars limit value

@@ -28,7 +28,7 @@ module Api
       end
 
       def destroy
-        @tweeter.destroy if @tweeter
+        @tweeter.destroy! if @tweeter.present?
       end
 
       private
