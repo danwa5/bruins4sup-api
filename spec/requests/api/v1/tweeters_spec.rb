@@ -59,7 +59,6 @@ RSpec.describe 'Api/V1/Tweeters', type: :request do
       expect {
         post '/api/v1/tweeters', params: params
       }.to change(Tweeter, :count).by(1)
-      json = JSON.parse(response.body)
       expect(response).to have_http_status(201)
     end
 
@@ -71,7 +70,6 @@ RSpec.describe 'Api/V1/Tweeters', type: :request do
         expect {
           post '/api/v1/tweeters', params: params
         }.not_to change(Tweeter, :count)
-        json = JSON.parse(response.body)
         expect(response).to have_http_status(:forbidden)
       end
     end
