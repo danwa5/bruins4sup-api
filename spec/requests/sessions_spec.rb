@@ -9,7 +9,7 @@ RSpec.describe 'Sessions', type: :request do
 
       get '/auth/:provider/callback'
       json = JSON.parse(response.body)
-      
+
       expect(response).to be_success
       aggregate_failures 'response json' do
         expect(json['id']).to eq(user.id)

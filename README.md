@@ -18,7 +18,7 @@ $ bundle check || bundle install
 
 * Register your app on https://apps.twitter.com
 * Generate your consumer key and secret
-* Set your TWITTER_API_KEY and TWITTER_API_SECRET environment variables
+* Set your `TWITTER_API_KEY` and `TWITTER_API_SECRET` environment variables
 
 ### Twitter Authentication
 
